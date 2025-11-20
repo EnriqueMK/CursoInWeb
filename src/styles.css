@@ -1,0 +1,38 @@
+/* Importacão de fonte personalizada */
+@font-face {
+    font-family: "momo-trust-display-regular";
+    src: url(app/fonts/Momo_Trust_Display/MomoTrustDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: "montserrat" ;
+    src: url(app/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "abel";
+    src: url(app/fonts/Abel/Abel-Regular.ttf);
+}
+
+/* Configuracão Global  */
+* {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+
+/* Variáveis */
+:root {
+    --azul-escuro: #010137;
+    --magenta-escuro: #470047;
+    --magenta: #BF0064;
+  }
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+  body {
+    background-image: linear-gradient(30deg, var(--azul-escuro), var(--magenta-escuro) 75%);
+}
