@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Main } from './main';
+import { ValidarCertificado } from './validar-certificado';
 
-describe('Main', () => {
-  let component: Main;
-  let fixture: ComponentFixture<Main>;
+describe('ValidarCertificado', () => {
+  let component: ValidarCertificado;
+  let fixture: ComponentFixture<ValidarCertificado>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Main]
+      imports: [ValidarCertificado]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Main);
+    fixture = TestBed.createComponent(ValidarCertificado);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
