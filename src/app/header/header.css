@@ -23,7 +23,6 @@ li + li:hover {
 li > a {
     font-family: "Abel";
     font-size: 22px;
-    text-decoration: none;
 }
 
 li > a:hover {
@@ -36,11 +35,10 @@ li > a:active {
 
 #titulo-header {
     text-align: center;
+    margin-bottom: 80px;
 }
 
-
 /* titulos e subtitulos do cabecalho */
-
 #titulo-header > p:nth-child(1) {
     font-family: "momo-trust-display-regular";
     padding-top: 130px;
@@ -63,7 +61,6 @@ li > a:active {
     font-size: 1.1em;
     transition: 0.2s;
     font-family: "montserrat";
-    text-decoration: none;
 }
 
 #titulo-header > #comecar:hover {

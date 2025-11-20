@@ -19,6 +19,7 @@
     margin: 0px;
     padding: 0px;
     color: white;
+    text-decoration: none;
 }
 
 /* Variáveis */
@@ -26,13 +27,14 @@
     --azul-escuro: #010137;
     --magenta-escuro: #470047;
     --magenta: #BF0064;
-  }
+}
 
 html {
     width: 100%;
     height: 100%;
 }
 
-  body {
-    background-image: linear-gradient(30deg, var(--azul-escuro), var(--magenta-escuro) 75%);
+body {
+    background-image: linear-gradient(45deg, var(--azul-escuro), var(--magenta-escuro) 60%, var(--magenta) 115%);
+    background-attachment: fixed;
 }

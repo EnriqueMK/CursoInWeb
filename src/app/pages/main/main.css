@@ -1,0 +1,119 @@
+* {
+    font-family: "montserrat";
+    background: white;
+    color: black;
+}
+
+/* Variáveis */
+:root {
+    --azul-escuro: #010137;
+    --magenta-escuro: #470047;
+    --magenta: #BF0064;
+}
+
+/* Deixa a opcacidade do conteúdo em 0 */
+#transition {
+    opacity: 0;
+    animation: transition 0.5s ease forwards;
+}
+
+/* Conteúdo volta a ter opacidade padrão */
+@keyframes transition {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.esfera1 {
+     position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1445px;
+    height: 130px;
+    background-image: linear-gradient(50deg, var(--magenta) 35%, var(--magenta-escuro));
+    border-radius: 50%;
+    transform: translate(-50%, 50%);
+    z-index: -2;
+}
+
+.esfera2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1500px;
+    height: 120px;
+    background: white;
+    border-radius: 50%;
+    transform: translate(-50%, 70%);
+    z-index: -1;
+}
+
+p {
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 30px;
+
+}
+
+p:nth-child(4) {
+    margin-bottom: 40px;
+}
+
+p:nth-child(3) {
+    font-weight: bold;
+    font-size: 2.3em;
+    color: var(--azul-escuro);
+    padding: 25px;
+}
+
+.container {
+    display: flex;
+    width: 1000px;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-bottom: 40px;
+    justify-content: space-around;
+    
+}
+
+.container > div {
+    padding: 30px;
+    border: 1px solid rgba(128, 128, 128, 0.459);
+    transition: .3s;
+}
+
+.container > div:hover {
+    box-shadow: 1px 1px 1px black;
+    transition: .2s;
+}
+
+.container a {
+    color: var(--magenta-escuro);
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#todos-cursos {
+    display: flex;
+    border: 1px solid black;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    border-radius: 6px;
+}
+
+#todos-cursos:hover {
+    transition: .2s;
+}
+
+#todos-cursos:active {
+    transform: translateY(4px);
+    background: rgba(128, 128, 128, 0.315);
+}
