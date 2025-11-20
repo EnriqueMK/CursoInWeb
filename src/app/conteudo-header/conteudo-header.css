@@ -1,0 +1,38 @@
+#titulo-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+/* titulos e subtitulos do cabecalho */
+#titulo-header > p:nth-child(1) {
+    font-family: "momo-trust-display-regular";
+    padding-top: 130px;
+    font-size: 3.5em;
+}
+
+#titulo-header > p:nth-child(2) {
+    padding-top: 65px;
+    font-family: "montserrat"; 
+    font-size: 1.3em;
+    margin-bottom: 40px;
+}
+
+#titulo-header > #comecar {
+    display: inline-block;
+    background: transparent;
+    border-radius: 100px;
+    padding: 15px 25px 15px 25px;
+    border: 1px solid white;
+    font-size: 1.1em;
+    transition: 0.2s;
+    font-family: "montserrat";
+}
+
+#titulo-header > #comecar:hover {
+    background: rgba(255, 255, 255, 0.158);
+    transition: .2s;
+}
+
+#titulo-header > #comecar:active {
+    transform: translateY(4px);
+}

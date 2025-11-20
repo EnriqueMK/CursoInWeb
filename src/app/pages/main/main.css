@@ -4,13 +4,6 @@
     color: black;
 }
 
-/* Variáveis */
-:root {
-    --azul-escuro: #010137;
-    --magenta-escuro: #470047;
-    --magenta: #BF0064;
-}
-
 /* Deixa a opcacidade do conteúdo em 0 */
 #transition {
     opacity: 0;
@@ -29,14 +22,14 @@
 
 
 .esfera1 {
-     position: absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
-    width: 1445px;
-    height: 130px;
+    width: 1490px;
+    height: 127px;
     background-image: linear-gradient(50deg, var(--magenta) 35%, var(--magenta-escuro));
     border-radius: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 57%);
     z-index: -2;
 }
 
@@ -59,15 +52,15 @@ p {
 
 }
 
-p:nth-child(4) {
-    margin-bottom: 40px;
-}
-
-p:nth-child(3) {
+p:nth-child(3), p:nth-child(7) {
     font-weight: bold;
     font-size: 2.3em;
     color: var(--azul-escuro);
     padding: 25px;
+}
+
+p:nth-child(4), p:nth-child(8) {
+    margin-bottom: 40px;
 }
 
 .container {
@@ -77,14 +70,14 @@ p:nth-child(3) {
     flex-wrap: wrap;
     margin: auto;
     margin-bottom: 40px;
-    justify-content: space-around;
-    
+    justify-content: center;
 }
 
 .container > div {
     padding: 30px;
     border: 1px solid rgba(128, 128, 128, 0.459);
     transition: .3s;
+    width: 300px;
 }
 
 .container > div:hover {
@@ -92,10 +85,20 @@ p:nth-child(3) {
     transition: .2s;
 }
 
-.container a {
+.container img {
+    width: 50px;
+    height: 50px;
+}
+
+.container div a {
+    display: flex;
     color: var(--magenta-escuro);
     font-size: 1.1em;
     font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
 }
 
 #todos-cursos {
@@ -107,6 +110,7 @@ p:nth-child(3) {
     width: 200px;
     height: 40px;
     border-radius: 6px;
+    margin-bottom: 100px
 }
 
 #todos-cursos:hover {
@@ -116,4 +120,50 @@ p:nth-child(3) {
 #todos-cursos:active {
     transform: translateY(4px);
     background: rgba(128, 128, 128, 0.315);
+}
+
+#matricule-se {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    width: 1200px;
+    height: 350px;
+    background-image: linear-gradient(40deg, var(--azul-escuro), var(--magenta-escuro) 50%);
+    border-radius: 15px;
+}
+
+#matricule-se > p {
+    margin-bottom: 60px;
+    background: transparent;
+    color: white;
+    font-family: "momo-trust-display-regular";
+    font-size: 3em;
+}
+
+#matricule-se > a {
+    display: flex;
+    border: 1px solid var(--magenta-escuro);
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 55px;
+    border-radius: 7px;
+    font-size: 1.2em;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: var(--magenta);
+    color: white;
+}
+
+#matricule-se > a:hover {
+    transition: .2s;
+}
+
+#matricule-se > a:active {
+    transform: translateY(4px);
+}
+
+#vazio {
+    padding-bottom: 50px;
 }
