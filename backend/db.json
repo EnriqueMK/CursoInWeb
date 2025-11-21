@@ -1,0 +1,12 @@
+{
+  "clientes": [
+    {
+        "id": "1",
+        "fistName": "Enrique",
+        "lastName": "Paulo",
+        "email": "enriquepaulon@gmail.com",
+        "phoneNumber": "(11)96874-6930",
+        "password": "1235Rick"
+    }
+  ]
+}

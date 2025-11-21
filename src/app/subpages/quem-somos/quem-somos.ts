@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './quem-somos.css',
 })
 export class QuemSomos {
-
+  voltarParaInicio() {
+    document.getElementById("topo-site")?.scrollIntoView({ behavior: "smooth" });
+  }
 }

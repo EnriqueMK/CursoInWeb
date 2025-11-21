@@ -8,4 +8,7 @@ import { RouterLink } from "@angular/router";
   styleUrl: './main.css',
 })
 export class Main {
+  voltarParaInicio() {
+    document.getElementById("topo-site")?.scrollIntoView({ behavior: "smooth" });
+  }
 }
