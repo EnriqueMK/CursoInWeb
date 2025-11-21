@@ -21,3 +21,60 @@
     font-family: "montserrat";
     font-weight: normal;
 }
+
+.container2 {
+    display: flex;
+    background: white;
+    justify-content: center;
+}
+
+.movimentacao:nth-child(1) {
+    display: flex;
+    padding-top: 100px;
+    flex-direction: column;
+    
+}
+
+.movimentacao:nth-child(1) > .subtitulo {
+    font-family: "momo-trust-display-regular";
+    font-size: 2em;
+    padding: 20px 0px 20px 0px;
+}
+
+.movimentacao:nth-child(1) > p {
+    font-family: "montserrat";
+    font-weight: normal;
+    width: 350px;
+    text-align: right;
+    line-height: 23px;
+}
+
+.movimentacao:nth-child(1) > .subtitulo, .movimentacao:nth-child(1) > p {
+    padding-right: 20px;
+} 
+
+.movimentacao:nth-child(1) > p + p {
+    color: rgb(66, 66, 66);
+}
+
+.movimentacao > img {
+    width: 350px;
+    height: 550px;
+    padding-left: 40px;
+}
+
+.movimentacao:nth-child(2) {
+    display: flex;
+    margin-top: 50px;
+    padding: 30px;
+    flex-direction: column;
+    background-color: aliceblue;
+    width: 400px;
+}
+
+.movimentacao:nth-child(2) > .titulo{
+    color: var(--magenta);
+    font-size: 2.5em;
+    font-family: "momo-trust-display-regular";
+
+}
