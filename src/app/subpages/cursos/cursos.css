@@ -1,0 +1,85 @@
+* {
+    color: var(--magenta-escuro);
+}
+
+.container {
+    background: transparent !important;
+    line-height: 45px;
+    margin: 50px 0px 20px 550px;
+}
+
+.container p {
+    color: white;
+}
+
+.container p:nth-child(1) {
+    font-family: "momo-trust-display-regular";
+    font-size: 2em;
+}
+
+.container p + p {
+    font-family: "montserrat";
+    font-weight: normal;
+}
+
+.container2 {
+    background: white;
+    font-family: "momo-trust-display-regular";
+}
+
+.movimentacao {
+    margin: auto;
+    width: 1000px;
+}
+
+.container2 > .movimentacao > .titulo-main {
+    font-size: 3em;
+    padding: 50px 0px 40px 0px;
+    width: 70px;
+    border-bottom: 3px solid var(--magenta);
+}
+
+.movimentacao p ~ p {
+    font-size: 1.5em;
+    margin: 130px 0px 35px 0px;
+}
+
+.cursos {
+    display: flex;
+    margin: 10px 10px 0px 10px;
+    width: 1000px;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+
+.conteudo-curso {
+    display: flex;
+    border: 2px solid var(--magenta-escuro);
+    border-radius: 17px;
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.413);
+    width: 270px;
+    height: 300px;
+    cursor: pointer;
+    transition: .2s;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.conteudo-curso:hover {
+    transition: .1s;  
+    transform: translatey(5px);
+}
+
+.conteudo-curso img {
+    width: 80px;
+    height: 80px;
+}
+
+#vazio {
+    padding-bottom: 50px;
+}
+

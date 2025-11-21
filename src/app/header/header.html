@@ -1,12 +1,12 @@
 <div>
     <nav>
         <ul>
-            <li><a href="header.html"><img src="https://cdn-icons-png.flaticon.com/512/1005/1005142.png" alt="logo-site"></a></li>
-            <li><a routerLink="/cursos">Cursos</a></li>
-            <li><a >Quem Somos</a></li>
-            <li><a >Validar Certificado</a></li>
-            <li><a >Fazer Login</a></li>
-            <li><a >Matricule-se</a></li>
+            <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1005/1005142.png" alt="logo-site"></a></li>
+            <li><a [routerLink]="[ { outlets: { primary: ['cursos'], footer: ['footer']} } ]" routerLinkActive="active">Cursos</a></li>
+            <li><a [routerLink]="[ { outlets: { primary: ['quem-somos'], footer: ['footer']} } ]" routerLinkActive="active">Quem Somos</a></li>
+            <li><a [routerLink]="[ { outlets: { primary: ['validar-certificado'], footer: ['footer']} } ]" routerLinkActive="active">Validar Certificado</a></li>
+            <li><a [routerLink]="[ { outlets: { primary: ['login'], footer: ['footer']} } ]" routerLinkActive="active">Fazer Login</a></li>
+            <li><a [routerLink]="[ { outlets: { primary: ['matricule'], footer: ['footer']} } ]" routerLinkActive="active">Matricule-se</a></li>
         </ul>
     </nav>
 </div>

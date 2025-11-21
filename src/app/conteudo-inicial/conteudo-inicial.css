@@ -31,6 +31,7 @@
 #titulo-header > #comecar:hover {
     background: rgba(255, 255, 255, 0.158);
     transition: .2s;
+    cursor: pointer;
 }
 
 #titulo-header > #comecar:active {

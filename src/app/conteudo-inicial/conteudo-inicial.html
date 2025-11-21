@@ -1,9 +1,9 @@
 <div id="titulo-header">
         <p>Aprenda Tecnologia com Cursos Gratuitos <br> do YouTube Organizados para você</p>
-
         <p>Conteúdos gratuitos organizados em módulos claros para facilitar seu aprendizado</p>
-
-        <a [routerLink]="[ { outlets: {primary: ['main'], footer: ['footer'] } } ]" routerLinkActive="active" id="comecar">
-            Começar!
-        </a>
+        <a (click)="mostrarMain = true; $event.preventDefault()" id="comecar">Começar!</a>
+</div>
+<div *ngIf="mostrarMain">
+  <app-main></app-main>
+  <app-footer></app-footer>
 </div>

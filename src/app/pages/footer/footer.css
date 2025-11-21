@@ -3,6 +3,25 @@
     color: rgba(71, 71, 71);
 }
 
+#btn-do-inicio {
+    background: white;
+    text-align: center;
+    padding: 50px;
+}
+
+#btn-inicio {
+    padding: 15px;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: .2s;
+}
+
+#btn-inicio:hover {
+    transition: .2s;
+    background: rgba(128, 128, 128, 0.151);
+}
+
 #foot {
     background: white;
     display: flex;
