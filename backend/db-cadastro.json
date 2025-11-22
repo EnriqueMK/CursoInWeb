@@ -1,0 +1,20 @@
+{
+  "alunos": [
+    {
+      "id": "5af9",
+      "nome": "Enrique",
+      "email": "enriquepaulon@gmail.com",
+      "phone": "11980480553",
+      "password": "123123123",
+      "passwordConfirm": "123123123"
+    },
+    {
+      "id": "493c",
+      "nome": "Enrique",
+      "email": "lucianamandrack@gmail.com",
+      "phone": "11980480553",
+      "password": "123123123",
+      "passwordConfirm": "123123123"
+    }
+  ]
+}

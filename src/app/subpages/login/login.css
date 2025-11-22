@@ -1,0 +1,74 @@
+* {
+    color: var(--magenta-escuro);
+}
+
+p {
+    text-align: center;
+    font-size: 2em;
+    font-family: "momo-trust-display-regular";
+    padding: 35px;
+}
+
+.formulario {
+    background: white;
+    padding: 0px 10px 50px 10px;
+    width: 600px;
+    border-radius: 40px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 64px;
+    box-shadow: 1px 10px 10px black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    margin: auto;
+}
+
+label {
+    font-size: 1.5em;
+    font-family: "montserrat";
+    padding-bottom: 10px;
+}
+
+.input-simples {
+    margin-bottom: 20px;
+    height: 50px;
+    border-radius: 20px;
+    border: 2px solid white;
+    font-size: 1.3em;
+    padding: 5px 0px 5px 13px;
+    color: black;
+    background: rgba(128, 128, 128, 0.144);
+    outline: none;
+    border: 2px solid var(--magenta);
+}
+
+.input-simples:hover {
+    border: 2px solid var(--magenta-escuro);
+    transition: .2s;
+}
+
+.input-submeter {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    transition: .2s;
+    font-size: 1.5em;
+    background: var(--magenta);
+    color: white;
+    border: 3px solid var(--magenta-escuro);
+    font-family: "montserrat";
+}
+
+.input-submeter:hover {
+    cursor: pointer;
+    background: var(--magenta-escuro);
+}
+
+.input-submeter:active {
+    transition: .2s;
+    transform: translateY(4px);
+}

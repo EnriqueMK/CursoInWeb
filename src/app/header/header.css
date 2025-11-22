@@ -22,7 +22,10 @@ li + li {
 li + li:hover {
     transition: .2s;
     transform: translateY(-3px);
+}
 
+a {
+    cursor: pointer;
 }
 
 li > a {
