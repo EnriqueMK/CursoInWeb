@@ -4,7 +4,7 @@
             <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1005/1005142.png" alt="logo-site"></a></li>
             <li><a [routerLink]="[ { outlets: { primary: ['cursos'], footer: ['footer']} } ]" routerLinkActive="active">Cursos</a></li>
             <li><a [routerLink]="[ { outlets: { primary: ['quem-somos'], footer: ['footer']} } ]" routerLinkActive="active">Quem Somos</a></li>
-            <li><a *ngIf="usuarioLogado">Meu Painel</a></li>
+            <li><a *ngIf="usuarioLogado" [routerLink]="[ { outlets: {primary: ['meu-painel'], footer: ['footer']} } ]" routerLinkActive="actived">Meu Painel</a></li>
             <li><a *ngIf="usuarioLogado" (click)="logout()">Sair</a></li>
             <li><a *ngIf="!usuarioLogado" [routerLink]="[ { outlets: { primary: ['login'], footer: ['footer']} } ]" routerLinkActive="active">Fazer Login</a></li>
             <li><a *ngIf="!usuarioLogado" [routerLink]="[ { outlets: { primary: ['matricule']} } ]" routerLinkActive="active">Matricule-se</a></li>

@@ -22,6 +22,7 @@ export class Header {
   logout() {
     localStorage.removeItem('usuarioLogado');
     alert("Conta deslogada!");
-    window.location.href = '#'
+    window.location.reload();
+    window.location.href = '#';
   }
 }

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Aluno } from '../../core/cadastrar-service/types';
 import { Alunos } from '../../core/cadastrar-service/alunos';
-import { Router } from '@angular/router';
 
 
 @Component({
@@ -18,7 +17,6 @@ export class Matricule {
 
   constructor(
     private service: Alunos,
-    private router: Router
   ) {}
 
   submeter() {

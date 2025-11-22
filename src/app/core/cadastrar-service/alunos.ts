@@ -17,4 +17,8 @@ export class Alunos {
   getAlunoByEmail(email: string) {
     return this.http.get<Aluno[]>(`http://localhost:3000/alunos?email=${email}`);
   }
+
+  getAlunoByPassword(password: string) {
+    return this.http.get<Aluno[]>(`http://localhost:3000/alunos?email=${password}`);
+  }
 }

@@ -5,6 +5,7 @@ import { Footer } from './pages/footer/footer';
 import { QuemSomos } from './subpages/quem-somos/quem-somos';
 import { Login } from './subpages/login/login';
 import { Matricule } from './subpages/matricule/matricule';
+import { MeuPainel } from './subpages/meu-painel/meu-painel';
 
 export const routes: Routes = [
     { path: '', component: ConteudoInicial},
@@ -12,6 +13,7 @@ export const routes: Routes = [
     { path: 'quem-somos', component: QuemSomos},
     { path: 'login', component: Login},
     { path: 'matricule', component: Matricule},
+    { path: 'meu-painel', component: MeuPainel},
     { path: 'footer', component: Footer, outlet: 'footer'}
 ];
 

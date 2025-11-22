@@ -39,20 +39,17 @@
     border-bottom: 3px solid var(--magenta);
 }
 
-.movimentacao p ~ p {
-    font-size: 1.5em;
-    margin: 130px 0px 35px 0px;
-}
-
-.cursos {
+.conteudo {
     display: flex;
-    margin: 10px 10px 0px 10px;
+    margin: 80px 10px 0px 0px;
     width: 1000px;
     gap: 50px;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
-.conteudo-curso {
+
+.conteudo-painel {
     display: flex;
     border: 2px solid var(--magenta-escuro);
     border-radius: 17px;
@@ -66,19 +63,20 @@
     justify-content: space-around;
     flex-direction: column;
     padding: 10px;
+    font-size: 1.5em;
 }
 
-.conteudo-curso:hover {
+.conteudo-painel:hover {
     transition: .1s;  
     transform: translatey(5px);
 }
 
-.conteudo-curso img {
-    width: 80px;
-    height: 80px;
+.conteudo-painel img {
+    width: 110px;
+    height: 110px;
 }
 
 #vazio {
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 

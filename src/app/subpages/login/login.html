@@ -2,11 +2,11 @@
     <p>Login</p>
     <form>
         <label for="input-email">E-mail</label>
-        <input type="text" name="input-email" id="input-email" class="input-simples" placeholder="Email">
+        <input type="text" name="input-email" id="input-email" class="input-simples" placeholder="Email" [(ngModel)]="aluno.email">
 
         <label for="input-password">Senha</label>
-        <input type="password" name="input-password" id="input-password" class="input-simples" placeholder="Senha">
+        <input type="password" name="input-password" id="input-password" class="input-simples" placeholder="Senha" [(ngModel)]="aluno.password">
 
-        <button type="button" class="input-submeter">Logar</button>
+        <button type="button" class="input-submeter" (click)="verificarLogin()">Logar</button>
     </form>
 </div>
