@@ -14,15 +14,20 @@ export class Alunos {
     return this.http.post<Aluno>(this.API, aluno);
   }
 
-  excluir(email: string): Observable<Aluno> {
-    return this.http.delete<Aluno>(this.API + `/${email}`)
+  excluir(id: number): Observable<Aluno> {
+    return this.http.delete<Aluno>(`${this.API}/${id}`);
+  }
+
+  editar(cliente: Aluno): Observable<Aluno> {
+    const url = `${this.API}/${cliente.id}`
+    return this.http.put<Aluno>(url, cliente)
   }
 
   getAlunoByEmail(email: string) {
-    return this.http.get<Aluno[]>(`http://localhost:3000/alunos?email=${email}`);
+    return this.http.get<Aluno[]>(`${this.API}?email=${email}`);
   }
 
   getAlunoByPassword(password: string) {
-    return this.http.get<Aluno[]>(`http://localhost:3000/alunos?email=${password}`);
+    return this.http.get<Aluno[]>(`${this.API}?email=${password}`);
   }
 }

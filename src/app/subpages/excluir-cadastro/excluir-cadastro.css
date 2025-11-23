@@ -3,7 +3,6 @@
 }
 
 .container {
-    background: transparent !important;
     line-height: 45px;
     margin: 50px 0px 20px 550px;
 }
@@ -22,10 +21,7 @@
 .formulario {
     font-family: "momo-trust-display-regular";
     background: white;
-    padding: 0px 10px 50px 10px;
-    height: 407px;
-    margin: auto;
-    box-shadow: 1px 10px 10px black;
+    height: 457px;
 }
 
 .formulario > .titulo-main {

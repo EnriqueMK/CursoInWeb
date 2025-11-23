@@ -4,9 +4,14 @@
 </div>
 <div class="formulario">
     <p class="titulo-main">Tem certeza que deseja excluir sua conta?</p>
-    <form action=>
+    <form (ngSubmit)="excluirAluno()">
         <label for="input-email">Digite seu E-mail</label>
-        <input type="text" name="input-email" id="input-email" class="input-simples">
-        <button type="button" class="input-submeter" (click)="excluirCadastro()">Excluir Conta</button>
+        <input type="text" 
+        [(ngModel)]="emailExcluir" 
+        name="input-email" 
+        id="input-email" 
+        class="input-simples"
+        required>
+        <button type="submit" class="input-submeter">Excluir Conta</button>
     </form>
 </div>

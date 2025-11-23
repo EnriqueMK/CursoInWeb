@@ -12,7 +12,6 @@ import { Alunos } from '../../core/cadastrar-service/alunos';
   styleUrl: './matricule.css',
 })
 export class Matricule {
-  titulo = 'Cadastro de Alunos';
   aluno: Aluno = {} as Aluno;
 
   constructor(
