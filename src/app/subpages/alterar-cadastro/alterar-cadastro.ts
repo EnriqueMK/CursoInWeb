@@ -10,19 +10,20 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./alterar-cadastro.css'],
 })
 export class AlterarCadastro {
-  aluno: any = {};
-
+  aluno: any = {}; // JSON
+  alunoAtualizado: any = {}; // Formulario
+ 
   constructor(
     private alunoService: Alunos,
   ) {}
-  
+
   ngOnInit() {
     const alunoLogado = JSON.parse(localStorage.getItem("usuarioLogado") || "null");
-    if (alunoLogado?.email) {
+    if (alunoLogado.email) {
       this.alunoService.getAlunoByEmail(alunoLogado.email).subscribe({
         next: (res) => {
           if (res.length > 0) {
-            this.aluno = res[0];
+            this.aluno = res[0]
           }
         },
         error: () => {
@@ -32,35 +33,48 @@ export class AlterarCadastro {
     }
   }
 
-  salvarAlteracoes(): void {
-    if (!this.aluno.nome || !this.aluno.email || !this.aluno.phone) {
-      alert("Preencha todos os campos obrigatórios!");
-      return;
-    }
-
-    if (this.aluno.nome.length < 3 || this.aluno.email.length < 5 || this.aluno.phone.length < 10 || this.aluno.password.length < 8) {
-      alert("Preencha com o mínimo de caractéres")
-      return;
-    }
-
-    if (this.aluno.senhaAtual) {
-      if (this.aluno.senhaAtual !== this.aluno.password) {
-        alert("Senha atual incorreta!")
+  salvarAlteracoes() {
+  // 1️⃣ Verifica se senhaAtual foi digitada
+    if (this.alunoAtualizado.senhaAtual) {
+      if (this.alunoAtualizado.senhaAtual !== this.aluno.password) {
+        alert("Senha atual incorreta!");
         return;
+      }
+
+      // 2️⃣ Verifica nova senha e confirmação
+      if (this.alunoAtualizado.currentPassword && this.alunoAtualizado.newPasswordConfirm) {
+        if (this.alunoAtualizado.currentPassword.length < 8 || this.alunoAtualizado.newPasswordConfirm.length < 8) {
+          alert("Senhas devem ter no mínimo 8 caracteres");
+          return;
+        }
+
+        if (this.alunoAtualizado.currentPassword !== this.alunoAtualizado.newPasswordConfirm) {
+          alert("As novas senhas não coincidem");
+          return;
+        }
+
+        // 3️⃣ Prepara objeto para enviar
+        this.aluno.password = this.alunoAtualizado.currentPassword;
       } else {
-        alert("Correto!")
+        alert("Digite a nova senha e confirme");
+        return;
       }
     }
 
+    let dadosParaAtualizar: any; // declare fora
+
     this.alunoService.getAlunoByEmail(this.aluno.email).subscribe(() => {
-      this.alunoService.editar(this.aluno).subscribe(() => {
-        const usuarioLogado = {
-          status: "true",
-          email: this.aluno.email
-        }
-        // this.aluno.password = 
-        localStorage.setItem("usuarioLogado", JSON.stringify(usuarioLogado));
-      })
-    })
+      dadosParaAtualizar = {
+        id: this.aluno.id,
+        nome: this.aluno.nome,
+        email: this.aluno.email,
+        phone: this.aluno.phone,
+        password: this.aluno.password
+      };
+
+      this.alunoService.editar(dadosParaAtualizar).subscribe(() => {
+        console.log("Atualizado com sucesso!");
+      });
+    });
   }
 }
