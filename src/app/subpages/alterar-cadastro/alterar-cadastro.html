@@ -4,7 +4,7 @@
 </div>
 <div class="formulario">
     <p class="titulo-main">Detalhes da Conta</p>
-    <form (ngSubmit)="salvarAlteracoes()">
+    <form>
         <label for="input-nome">Nome</label>
         <input type="text" name="input-nome" id="input-nome" class="input-simples" [(ngModel)]="aluno.nome">
 
@@ -23,7 +23,7 @@
         <label for="input-passwordConfirm">Confirmar Senha</label>
         <input type="password" name="input-passwordConfirm" id="input-passwordConfirm" class="input-simples">
 
-        <button type="button" class="input-submeter" >Salvar alterações</button>
+        <button type="button" class="input-submeter" (click)="salvarAlteracoes()">Salvar alterações</button>
     </form>
     <div id="vazio"></div>
 </div>

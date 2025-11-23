@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Aluno } from './types';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -18,9 +18,9 @@ export class Alunos {
     return this.http.delete<Aluno>(`${this.API}/${id}`);
   }
 
-  editar(cliente: Aluno): Observable<Aluno> {
-    const url = `${this.API}/${cliente.id}`
-    return this.http.put<Aluno>(url, cliente)
+  editar(aluno: Aluno): Observable<Aluno> {
+    const url = `${this.API}/${aluno.id}`
+    return this.http.put<Aluno>(url, aluno)
   }
 
   getAlunoByEmail(email: string) {
