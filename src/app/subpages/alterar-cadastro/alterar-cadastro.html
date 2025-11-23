@@ -15,13 +15,13 @@
         <input type="text" name="input-phone" id="input-phone" class="input-simples" [(ngModel)]="aluno.phone">
 
         <label for="input-current-password">Senha Atual (deixe em branco para não alterar)</label>
-        <input type="password" name="input-current-password" id="input-current-password" class="input-simples">
+        <input type="password" name="input-current-password" id="input-current-password" class="input-simples" [(ngModel)]="aluno.senhaAtual">
 
         <label for="input-new-password">Nova Senha (deixe em branco para não alterar)</label>
-        <input type="password" name="input-new-password" id="input-new-password" class="input-simples">
+        <input type="password" name="input-new-password" id="input-new-password" class="input-simples" [(ngModel)]="aluno.currentPassword">
 
         <label for="input-passwordConfirm">Confirmar Senha</label>
-        <input type="password" name="input-passwordConfirm" id="input-passwordConfirm" class="input-simples">
+        <input type="password" name="input-passwordConfirm" id="input-passwordConfirm" class="input-simples" [(ngModel)]="aluno.newPasswordConfirm">
 
         <button type="button" class="input-submeter" (click)="salvarAlteracoes()">Salvar alterações</button>
     </form>

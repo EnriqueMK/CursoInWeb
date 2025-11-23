@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Alunos } from '../../core/cadastrar-service/alunos';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-alterar-cadastro',
@@ -11,15 +10,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./alterar-cadastro.css'],
 })
 export class AlterarCadastro {
-  aluno: any = {
-    nome: '',
-    email: '',
-    phone: ''
-  };
+  aluno: any = {};
 
   constructor(
     private alunoService: Alunos,
-    private router: Router
   ) {}
   
   ngOnInit() {
@@ -39,16 +33,41 @@ export class AlterarCadastro {
   }
 
   salvarAlteracoes(): void {
-    this.alunoService.getAlunoByEmail(this.aluno.email).subscribe(() => {
-      if (this.aluno.nome === "" || this.aluno.email === "" || this.aluno.phone === "") {
-        alert("Sem campos vazios!");
+    if (!this.aluno.nome || !this.aluno.email || !this.aluno.phone) {
+      alert("Preencha todos os campos obrigatórios!");
+      return;
+    }
+
+    if (this.aluno.nome.length < 3 || this.aluno.email.length < 5 || this.aluno.phone.length < 10 || this.aluno.password.length < 8) {
+      alert("Preencha com o mínimo de caractéres")
+      return;
+    }
+
+    if (this.aluno.senhaAtual) {
+      if (this.aluno.currentPassword !== this.aluno.senhaAtual) {
+        alert("Senha atual incorreta!");
         return;
-      } else if (this.aluno.nome.length < 3 || this.aluno.email.length < 5 || this.aluno.phone.length < 10 || this.aluno.password.length < 8) {
-        alert("Preencha corretamente!");
-        return;
-      } else {
-        if (this.aluno.)
       }
+    }
+
+    if (this.aluno.newPassword !== this.aluno.passwordConfirm) {
+      alert("Nova senha e confirmação não coincidem!");
+      return;
+    }
+
+    if (this.aluno.newPassword && this.aluno.newPassword.length < 8) {
+      alert("Nova senha deve ter no mínimo 8 caracteres!");
+      return;
+    }
+
+    this.alunoService.getAlunoByEmail(this.aluno.email).subscribe(() => {
+      this.alunoService.editar(this.aluno).subscribe(() => {
+        const usuarioLogado = {
+          status: "true",
+          email: this.aluno.email
+        }
+        localStorage.setItem("usuarioLogado", JSON.stringify(usuarioLogado));
+      })
     })
   }
 }

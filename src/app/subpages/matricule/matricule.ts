@@ -23,7 +23,7 @@ export class Matricule {
       return;
     }
 
-    if (this.aluno.password !== this.aluno.passwordConfirm) {
+    if (this.aluno.passwordConfirm !== this.aluno.password) {
       return;
     }
 
