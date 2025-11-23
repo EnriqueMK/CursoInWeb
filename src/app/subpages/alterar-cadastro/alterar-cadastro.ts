@@ -44,20 +44,12 @@ export class AlterarCadastro {
     }
 
     if (this.aluno.senhaAtual) {
-      if (this.aluno.currentPassword !== this.aluno.senhaAtual) {
-        alert("Senha atual incorreta!");
+      if (this.aluno.senhaAtual !== this.aluno.password) {
+        alert("Senha atual incorreta!")
         return;
+      } else {
+        alert("Correto!")
       }
-    }
-
-    if (this.aluno.newPassword !== this.aluno.passwordConfirm) {
-      alert("Nova senha e confirmação não coincidem!");
-      return;
-    }
-
-    if (this.aluno.newPassword && this.aluno.newPassword.length < 8) {
-      alert("Nova senha deve ter no mínimo 8 caracteres!");
-      return;
     }
 
     this.alunoService.getAlunoByEmail(this.aluno.email).subscribe(() => {
@@ -66,6 +58,7 @@ export class AlterarCadastro {
           status: "true",
           email: this.aluno.email
         }
+        // this.aluno.password = 
         localStorage.setItem("usuarioLogado", JSON.stringify(usuarioLogado));
       })
     })

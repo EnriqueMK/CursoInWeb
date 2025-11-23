@@ -6,7 +6,8 @@
       "email": "123@gmail.com",
       "phone": "11980480553",
       "password": "123123123",
-      "passwordConfirm": "123123123"
+      "passwordConfirm": "123123123",
+      "senhaAtual": "123123123"
     }
   ]
 }
