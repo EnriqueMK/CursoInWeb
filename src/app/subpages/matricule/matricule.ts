@@ -34,7 +34,11 @@ export class Matricule {
         return;
       } else if (localStorage.getItem('usuarioLogado') === null) {
         this.service.cadastrar(this.aluno).subscribe(() => {
-          localStorage.setItem('usuarioLogado', 'true');
+          const usuarioLogado = {
+            status: "true",
+            email: this.aluno.email
+          }
+          localStorage.setItem("usuarioLogado", JSON.stringify(usuarioLogado));
           this.aluno = {
             nome: '',
             email: '',

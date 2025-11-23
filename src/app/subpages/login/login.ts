@@ -29,7 +29,11 @@ export class Login {
             alert("Senha Incorreta!");
             return;
           } else {
-            localStorage.setItem("usuarioLogado", "true");
+            const usuarioLogado = {
+              status: "true",
+              email: this.aluno.email
+            }
+            localStorage.setItem("usuarioLogado", JSON.stringify(usuarioLogado));
             alert("Login realizado com sucesso!")
             window.location.href = '#'
           }

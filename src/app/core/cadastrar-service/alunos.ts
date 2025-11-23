@@ -14,6 +14,10 @@ export class Alunos {
     return this.http.post<Aluno>(this.API, aluno);
   }
 
+  excluir(email: string): Observable<Aluno> {
+    return this.http.delete<Aluno>(this.API + `/${email}`)
+  }
+
   getAlunoByEmail(email: string) {
     return this.http.get<Aluno[]>(`http://localhost:3000/alunos?email=${email}`);
   }

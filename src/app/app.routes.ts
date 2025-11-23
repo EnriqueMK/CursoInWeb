@@ -6,6 +6,8 @@ import { QuemSomos } from './subpages/quem-somos/quem-somos';
 import { Login } from './subpages/login/login';
 import { Matricule } from './subpages/matricule/matricule';
 import { MeuPainel } from './subpages/meu-painel/meu-painel';
+import { AlterarCadastro } from './subpages/alterar-cadastro/alterar-cadastro';
+import { ExcluirCadastro } from './subpages/excluir-cadastro/excluir-cadastro';
 
 export const routes: Routes = [
     { path: '', component: ConteudoInicial},
@@ -14,6 +16,8 @@ export const routes: Routes = [
     { path: 'login', component: Login},
     { path: 'matricule', component: Matricule},
     { path: 'meu-painel', component: MeuPainel},
+    { path: 'alterar-cadastro', component: AlterarCadastro},
+    { path: 'excluir-cadastro', component: ExcluirCadastro},
     { path: 'footer', component: Footer, outlet: 'footer'}
 ];
 

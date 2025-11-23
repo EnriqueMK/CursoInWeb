@@ -14,7 +14,8 @@ export class Header {
   usuarioLogado: boolean = false;
 
   ngOnInit() {
-    if (localStorage.getItem('usuarioLogado') === 'true') {
+    const usuarioDados =  JSON.parse(localStorage.getItem('usuarioLogado') || '{}');
+    if (usuarioDados.status === 'true') {
       this.usuarioLogado = true;
     }
   }
