@@ -5,11 +5,11 @@
       "nome": "Enrique",
       "email": "lucianamandrack@gmail.com",
       "phone": "11980480553",
-      "password": "123123123",
-      "passwordConfirm": "123123123",
+      "password": "aaaaaaaaa",
+      "passwordConfirm": "aaaaaaaaa",
       "cursosFavoritos": [
-        "Javascript",
-        "Python"
+        "Python",
+        "Segurança da informação"
       ]
     }
   ]

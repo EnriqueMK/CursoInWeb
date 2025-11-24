@@ -32,4 +32,8 @@ export class Cursosfav {
     return this.http.get<any[]>(this.API);
   }
 
+  excluir(id: number): Observable<any> {
+    return this.http.delete<any>(`${this.API}/${id}`);
+  } 
+
 }

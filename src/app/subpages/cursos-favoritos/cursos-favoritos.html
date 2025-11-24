@@ -1,8 +1,18 @@
-<div class="content-container">
-  <h2>Meus Cursos Favoritos</h2>
-  <ul>
-    <li *ngFor="let curso of listaCursos">
-      {{ curso }}
-    </li>
-  </ul>
+<div class="container">
+    <p id="titulo-header">Cursos Favoritos</p>
+    <p>Meu Painel >> Meus Cursos Favoritos</p>
+</div>
+<div class="container2">
+  <div class="movimentacao">
+    <p class="titulo-main">Meus Cursos Favoritos</p>
+    <div class="conteudo">
+      <ol>
+        <li *ngFor="let curso of listaCursos">
+          {{ curso }}
+          <button type="button" (click)="removerCurso()">Remover</button>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <div id="vazio"></div>
 </div>
