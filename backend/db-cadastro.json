@@ -1,11 +1,16 @@
 {
   "alunos": [
     {
-      "id": "9034",
+      "id": "f547",
       "nome": "Enrique",
-      "email": "enriquepaulo@gmail.com",
+      "email": "lucianamandrack@gmail.com",
       "phone": "11980480553",
-      "password": "aaaaaaaaa"
+      "password": "123123123",
+      "passwordConfirm": "123123123",
+      "cursosFavoritos": [
+        "Javascript",
+        "Python"
+      ]
     }
   ]
 }

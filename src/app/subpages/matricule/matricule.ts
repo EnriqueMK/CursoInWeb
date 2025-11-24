@@ -38,13 +38,6 @@ export class Matricule {
             email: this.aluno.email
           }
           localStorage.setItem("usuarioLogado", JSON.stringify(usuarioLogado));
-          this.aluno = {
-            nome: '',
-            email: '',
-            phone: '',
-            password: '',
-            passwordConfirm: ''
-          };
           alert("Sua conta foi cadastrada!")
           window.location.href = '#'
         });

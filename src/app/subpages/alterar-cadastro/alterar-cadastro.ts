@@ -10,8 +10,8 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./alterar-cadastro.css'],
 })
 export class AlterarCadastro {
-  aluno: any = {}; // JSON
-  alunoAtualizado: any = {}; // Formulario
+  aluno: any = {}; 
+  alunoAtualizado: any = {}; 
  
   constructor(
     private alunoService: Alunos,
@@ -34,14 +34,12 @@ export class AlterarCadastro {
   }
 
   salvarAlteracoes() {
-  // 1️⃣ Verifica se senhaAtual foi digitada
     if (this.alunoAtualizado.senhaAtual) {
       if (this.alunoAtualizado.senhaAtual !== this.aluno.password) {
         alert("Senha atual incorreta!");
         return;
       }
 
-      // 2️⃣ Verifica nova senha e confirmação
       if (this.alunoAtualizado.currentPassword && this.alunoAtualizado.newPasswordConfirm) {
         if (this.alunoAtualizado.currentPassword.length < 8 || this.alunoAtualizado.newPasswordConfirm.length < 8) {
           alert("Senhas devem ter no mínimo 8 caracteres");
@@ -53,7 +51,6 @@ export class AlterarCadastro {
           return;
         }
 
-        // 3️⃣ Prepara objeto para enviar
         this.aluno.password = this.alunoAtualizado.currentPassword;
       } else {
         alert("Digite a nova senha e confirme");
@@ -61,7 +58,7 @@ export class AlterarCadastro {
       }
     }
 
-    let dadosParaAtualizar: any; // declare fora
+    let dadosParaAtualizar: any;
 
     this.alunoService.getAlunoByEmail(this.aluno.email).subscribe(() => {
       dadosParaAtualizar = {
@@ -69,11 +66,18 @@ export class AlterarCadastro {
         nome: this.aluno.nome,
         email: this.aluno.email,
         phone: this.aluno.phone,
-        password: this.aluno.password
+        password: this.aluno.password,
+        passwordConfirm: this.aluno.password
       };
 
       this.alunoService.editar(dadosParaAtualizar).subscribe(() => {
-        console.log("Atualizado com sucesso!");
+        const usuarioLogado = {
+          status: "true",
+          email: this.aluno.email
+        }
+        localStorage.setItem("usuarioLogado", JSON.stringify(usuarioLogado));
+        alert("Cadastrado com Sucesso!");
+        window.location.reload();
       });
     });
   }

@@ -39,6 +39,14 @@
     border-bottom: 3px solid var(--magenta);
 }
 
+.favorite {
+    display: inline-block;
+    margin-left: 15px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
 .movimentacao p ~ p {
     font-size: 1.5em;
     margin: 130px 0px 35px 0px;

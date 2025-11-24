@@ -1,0 +1,26 @@
+* {
+    color: white;
+}
+
+.container {
+    line-height: 45px;
+    margin: 50px 0px 20px 550px;
+}
+
+.container p {
+    color: white;
+}
+
+.container p:nth-child(1) {
+    font-family: "momo-trust-display-regular";
+    font-size: 2em;
+}
+
+.container p + p {
+    font-family: "montserrat";
+    font-weight: normal;
+}
+
+#vazio {
+    padding-bottom: 100px;
+}

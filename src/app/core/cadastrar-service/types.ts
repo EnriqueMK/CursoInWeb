@@ -1,3 +1,5 @@
+import { CursoFav } from "../curso-favorito-service/types";
+
 export interface Aluno {
     id?: number;
     nome: string;
@@ -5,4 +7,5 @@ export interface Aluno {
     phone: string;
     password: string;
     passwordConfirm: string;
+    cursosFavoritos: CursoFav[]
 }
