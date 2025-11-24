@@ -19,11 +19,32 @@ export class Matricule {
   ) {}
 
   submeter() {
-    if (this.aluno.nome.length < 3 || this.aluno.email.length < 5 || this.aluno.phone.length < 10 || this.aluno.password.length < 8) {
+    if (this.aluno.nome === "" || this.aluno.email === "" || this.aluno.phone === "" || this.aluno.password === "" || this.aluno.passwordConfirm === "") {
+      alert("Preencha os campos vazios");
       return;
     }
 
+    if (this.aluno.nome.length < 3) {
+      alert("O nome deve conter no mínimo 3 caractéres");
+      return;
+    }
+
+    if (this.aluno.email.length < 5) {
+      alert("O email deve conter o mínimo de caractéres")
+      return;
+    }
+
+    if (this.aluno.phone.length < 10) {
+      alert("O telefone deve conter no mínimo 9 caractéres");
+      return;
+    }
+
+    if (this.aluno.password.length < 8) {
+      alert("A senha deve conter no mínimo 8 caractéres")
+    }
+
     if (this.aluno.passwordConfirm !== this.aluno.password) {
+      alert("As sennha não se coincidem")
       return;
     }
 

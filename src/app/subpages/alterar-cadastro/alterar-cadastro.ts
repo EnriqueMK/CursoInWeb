@@ -34,6 +34,21 @@ export class AlterarCadastro {
   }
 
   salvarAlteracoes() {
+    if (this.aluno.nome.length < 3) {
+      alert("O nome deve conter no mínimo 3 caractéres");
+      return;
+    }
+
+    if (this.aluno.email.length < 5) {
+      alert("O email deve conter o mínimo de caractéres")
+      return;
+    }
+
+    if (this.aluno.phone.length < 10) {
+      alert("O telefone deve conter no mínimo 9 caractéres");
+      return;
+    }
+    
     if (this.alunoAtualizado.senhaAtual) {
       if (this.alunoAtualizado.senhaAtual !== this.aluno.password) {
         alert("Senha atual incorreta!");
@@ -53,7 +68,7 @@ export class AlterarCadastro {
 
         this.aluno.password = this.alunoAtualizado.currentPassword;
       } else {
-        alert("Digite a nova senha e confirme");
+        alert("Digite a nova senha e a confirmar senha");
         return;
       }
     }
