@@ -8,7 +8,6 @@ import { Matricule } from './subpages/matricule/matricule';
 import { MeuPainel } from './subpages/meu-painel/meu-painel';
 import { AlterarCadastro } from './subpages/alterar-cadastro/alterar-cadastro';
 import { ExcluirCadastro } from './subpages/excluir-cadastro/excluir-cadastro';
-import { Aulas } from './subpages/aulas/aulas';
 import { CursosFavoritos } from './subpages/cursos-favoritos/cursos-favoritos';
 
 export const routes: Routes = [
@@ -20,7 +19,6 @@ export const routes: Routes = [
     { path: 'meu-painel', component: MeuPainel},
     { path: 'alterar-cadastro', component: AlterarCadastro},
     { path: 'excluir-cadastro', component: ExcluirCadastro},
-    { path: 'aulas', component: Aulas },
     { path: 'cursos-favoritos', component: CursosFavoritos},
     { path: 'footer', component: Footer, outlet: 'footer'}
 ];

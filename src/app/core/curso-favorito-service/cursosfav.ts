@@ -32,8 +32,13 @@ export class Cursosfav {
     return this.http.get<any[]>(this.API);
   }
 
-  excluir(id: number): Observable<any> {
-    return this.http.delete<any>(`${this.API}/${id}`);
-  } 
+  excluir(email: string, aluno: any): Observable<any> {
+    return this.http.put(`${this.API}/${email}`, aluno);
+  }
+
+  getAlunoByEmail(email: string): Observable<any[]> {
+    return this.http.get<any[]>(`${this.API}?email=${email}`);
+  }
+
 
 }

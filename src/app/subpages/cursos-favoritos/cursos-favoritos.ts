@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Cursosfav } from '../../core/curso-favorito-service/cursosfav';
 import { CommonModule } from '@angular/common';
 import { Aluno } from '../../core/cadastrar-service/types';
-import { Alunos } from '../../core/cadastrar-service/alunos';
 
 @Component({
   selector: 'app-cursos-favoritos',
@@ -13,11 +12,9 @@ import { Alunos } from '../../core/cadastrar-service/alunos';
 export class CursosFavoritos implements OnInit {
   listaCursos: string[] = []; 
   alunoLogado!: Aluno;
-  idExcluir: number | null = null;
 
   constructor(
-    private service: Cursosfav,
-    private alunoService: Alunos
+    private service: Cursosfav
   ) {}
 
   ngOnInit(): void {
@@ -28,17 +25,34 @@ export class CursosFavoritos implements OnInit {
     this.service.listar().subscribe(alunos => {
       const aluno = alunos.find(a => a.email === usuario.email);
       if (aluno) {
-        this.alunoLogado = aluno;
         this.listaCursos = aluno.cursosFavoritos || [];
       }
     });
   }
 
-  removerCurso(): void {
-    if (this.idExcluir != null) {
-      this.alunoService.excluir(this.idExcluir).subscribe({
-        nex
-      })
-    }
+  removerCurso(curso: string) {
+    const email = JSON.parse(localStorage.getItem("usuarioLogado") || '{}').email;
+
+    this.service.getAlunoByEmail(email).subscribe((alunos) => {
+      const aluno = alunos[0];
+    
+      if (!aluno) {
+        console.error("Aluno não encontrado!");
+        return;
+      }
+
+      const novosFavoritos = aluno.cursosFavoritos.filter(
+        (c: string) => c !== curso
+      );
+
+      const alunoAtualizado = {
+        ...aluno,
+        cursosFavoritos: novosFavoritos
+      };
+      this.service.excluir(aluno.id, alunoAtualizado).subscribe(() => {
+        alert("Curso removido com sucesso!");
+        window.location.reload();
+      });
+    });
   }
 }

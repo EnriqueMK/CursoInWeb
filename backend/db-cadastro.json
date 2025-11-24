@@ -7,10 +7,7 @@
       "phone": "11980480553",
       "password": "aaaaaaaaa",
       "passwordConfirm": "aaaaaaaaa",
-      "cursosFavoritos": [
-        "Python",
-        "Segurança da informação"
-      ]
+      "cursosFavoritos": []
     }
   ]
 }

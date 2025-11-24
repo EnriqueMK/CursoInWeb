@@ -9,7 +9,7 @@
       <ol>
         <li *ngFor="let curso of listaCursos">
           {{ curso }}
-          <button type="button" (click)="removerCurso()">Remover</button>
+          <button type="button" (click)="removerCurso(curso)">Remover</button>
         </li>
       </ol>
     </div>
