@@ -9,6 +9,7 @@ import { MeuPainel } from './subpages/meu-painel/meu-painel';
 import { AlterarCadastro } from './subpages/alterar-cadastro/alterar-cadastro';
 import { ExcluirCadastro } from './subpages/excluir-cadastro/excluir-cadastro';
 import { CursosFavoritos } from './subpages/cursos-favoritos/cursos-favoritos';
+import { Aulas } from './subpages/aulas/aulas';
 
 export const routes: Routes = [
     { path: '', component: ConteudoInicial},
@@ -20,6 +21,7 @@ export const routes: Routes = [
     { path: 'alterar-cadastro', component: AlterarCadastro},
     { path: 'excluir-cadastro', component: ExcluirCadastro},
     { path: 'cursos-favoritos', component: CursosFavoritos},
+    { path: 'aulas/:id', component: Aulas},
     { path: 'footer', component: Footer, outlet: 'footer'}
 ];
 

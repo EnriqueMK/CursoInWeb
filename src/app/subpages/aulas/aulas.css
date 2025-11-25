@@ -1,0 +1,35 @@
+* {
+    color: var(--magenta-escuro);
+}
+
+.container2 {
+    margin-top: 50px;
+    padding-top: 50px;
+    background: white;
+    font-family: "momo-trust-display-regular";
+}
+
+.container2 > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container2 iframe {
+    width: 800px;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 1px 10px 10px rgb(0, 0, 0);
+    border: 4px solid var(--magenta-escuro);
+    margin: 40px 0px 70px 0px;
+}
+
+.container2 p:nth-child(1) {
+    padding: 10px;
+}
+
+.container2 .titulo-main {
+    font-size: 3em;
+    text-align: center;
+}

@@ -1,12 +1,12 @@
 {
   "alunos": [
     {
-      "id": "de16",
+      "id": "4ed1",
       "nome": "Enrique",
       "email": "lucianamandrack@gmail.com",
-      "phone": "119804dasdasdas",
-      "password": "321321321",
-      "passwordConfirm": "321321321",
+      "phone": "12312312311",
+      "password": "123123123ddd",
+      "passwordConfirm": "123123123ddd",
       "cursosFavoritos": []
     }
   ]
