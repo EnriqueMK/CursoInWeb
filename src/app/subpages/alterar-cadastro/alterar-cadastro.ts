@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Alunos } from '../../core/cadastrar-service/alunos';
 import { FormsModule } from '@angular/forms';
+import { RouterLink, RouterLinkActive } from "@angular/router";
 
 @Component({
   selector: 'app-alterar-cadastro',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink, RouterLinkActive],
   templateUrl: './alterar-cadastro.html',
   styleUrls: ['./alterar-cadastro.css'],
 })

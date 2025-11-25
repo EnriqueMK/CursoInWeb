@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Cursosfav } from '../../core/curso-favorito-service/cursosfav';
 import { CommonModule } from '@angular/common';
 import { Aluno } from '../../core/cadastrar-service/types';
+import { RouterLink, RouterLinkActive } from "@angular/router";
 
 @Component({
   selector: 'app-cursos-favoritos',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink, RouterLinkActive],
   templateUrl: './cursos-favoritos.html',
   styleUrls: ['./cursos-favoritos.css']
 })

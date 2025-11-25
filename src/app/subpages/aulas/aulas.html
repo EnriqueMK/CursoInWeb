@@ -1,3 +1,10 @@
+<div class="container">
+    <p id="titulo-header">Aulas</p>
+    <p><a routerLink="/cursos" routerLinkActive="active">Cursos</a> >> 
+        <span *ngIf="cursoSelecionado === 'python01' || cursoSelecionado === 'python02' || cursoSelecionado === 'python03'">Python</span>
+        <span *ngIf=" cursoSelecionado === 'informationSecurity00' || cursoSelecionado === 'informationSecurity01' || cursoSelecionado === 'informationSecurity02' ||  cursoSelecionado === 'informationSecurity03' || cursoSelecionado === 'informationSecurity04'">Segurança da informação</span>
+    </p>
+</div>
 <div class="container2">
     <div class="python">
         <div *ngIf="cursoSelecionado === 'python01'">

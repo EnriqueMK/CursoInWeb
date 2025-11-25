@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { Cursosfav } from '../../core/curso-favorito-service/cursosfav';
 import { CursoFav } from '../../core/curso-favorito-service/types';
-import { RouterLink, RouterLinkActive } from "@angular/router";
+import { RouterLink } from "@angular/router";
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-cursos',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, CommonModule],
+  imports: [RouterLink, CommonModule],
   templateUrl: './cursos.html',
   styleUrls: ['./cursos.css']
 })

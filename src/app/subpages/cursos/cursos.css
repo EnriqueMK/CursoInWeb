@@ -21,6 +21,15 @@
     font-weight: normal;
 }
 
+.container a {
+    cursor: pointer;
+    color: white;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
 .container2 {
     background: white;
     font-family: "momo-trust-display-regular";

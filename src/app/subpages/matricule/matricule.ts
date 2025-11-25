@@ -56,6 +56,7 @@ export class Matricule {
         this.service.cadastrar(this.aluno).subscribe(() => {
           const usuarioLogado = {
             status: "true",
+            nome: this.aluno.nome,
             email: this.aluno.email
           }
           localStorage.setItem("usuarioLogado", JSON.stringify(usuarioLogado));

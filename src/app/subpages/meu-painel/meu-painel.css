@@ -21,6 +21,15 @@
     font-weight: normal;
 }
 
+.container a {
+    cursor: pointer;
+    color: white;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
 .container2 {
     background: white;
     font-family: "momo-trust-display-regular";
@@ -34,8 +43,11 @@
 .container2 > .movimentacao > .titulo-main {
     font-size: 3em;
     padding: 50px 0px 40px 0px;
+}
+
+#borda {
+    border-top: 3px solid var(--magenta);
     width: 70px;
-    border-bottom: 3px solid var(--magenta);
 }
 
 .conteudo {

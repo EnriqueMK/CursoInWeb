@@ -18,6 +18,15 @@
     font-size: 2em;
 }
 
+.container a {
+    cursor: pointer;
+    color: white;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
 .formulario {
     font-family: "momo-trust-display-regular";
     background: white;
