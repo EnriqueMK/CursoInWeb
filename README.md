@@ -45,10 +45,10 @@ O projeto utiliza o json-server para simular um backend RESTful.
 
 Estrutura básica da API:
 
-- GET  alunos.ts/getAlunoByEmail → Listar usuários
-- POST alunos.ts/cadastrar → Criar novo usuário
-- PUT  alunos.ts/editar → Atualizar usuário
-- DELETE  alunos.ts/excluir → Remover usuário
+- GET  **alunos.ts/getAlunoByEmail** → Listar usuários
+- POST **alunos.ts/cadastrar** → Criar novo usuário
+- PUT  **alunos.ts/editar** → Atualizar usuário
+- DELETE  **alunos.ts/excluir** → Remover usuário
 
 ---
 
@@ -66,3 +66,5 @@ Estrutura básica da API:
 Desenvolvido por **Enrique**
 
 Projeto criado na universidade SENAC com foco em aprendizado prático e impacto sucial através da tecnologia 
+
+Meu Linkedin: <a href="https://www.linkedin.com/in/enrique-paulo/">www.linkedin.com/in/enrique-paulo</a>
