@@ -1,12 +1,12 @@
 {
   "alunos": [
     {
-      "id": "35f7",
-      "nome": "Enrique",
-      "email": "lucianamandrack@gmail.com",
-      "phone": "11980480553",
-      "password": "123123123",
-      "passwordConfirm": "123123123"
+      "id": "0e27",
+      "nome": "Vesga",
+      "email": "vesga@gmail.com",
+      "phone": "119888888888",
+      "password": "vesgadaabunda",
+      "passwordConfirm": "vesgadaabunda"
     }
   ]
 }

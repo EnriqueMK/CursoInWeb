@@ -8,7 +8,6 @@
             <li><a *ngIf="usuarioLogado" (click)="logout()">Sair</a></li>
             <li><a *ngIf="!usuarioLogado" [routerLink]="[ { outlets: { primary: ['login'], footer: ['footer']} } ]" routerLinkActive="active">Fazer Login</a></li>
             <li><a *ngIf="!usuarioLogado" [routerLink]="[ { outlets: { primary: ['matricule']} } ]" routerLinkActive="active">Matricule-se</a></li>
-            
         </ul>
     </nav>
 </div>

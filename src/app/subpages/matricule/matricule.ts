@@ -11,7 +11,7 @@ import { Alunos } from '../../core/cadastrar-service/alunos';
   templateUrl: './matricule.html',
   styleUrl: './matricule.css',
 })
-export class Matricule {
+export class Matricule { 
   aluno: Aluno = {} as Aluno;
 
   constructor(

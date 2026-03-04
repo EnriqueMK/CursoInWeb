@@ -39,6 +39,4 @@ export class Cursosfav {
   getAlunoByEmail(email: string): Observable<any[]> {
     return this.http.get<any[]>(`${this.API}?email=${email}`);
   }
-
-
 }
