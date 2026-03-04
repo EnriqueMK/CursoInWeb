@@ -19,11 +19,11 @@ O projeto foi idealizado com a missão de
 
 <h2>🛠️ Tecnologias Utilizadas</h2>
 
-- TypeScript
-- HTML5
-- CSS3
-- json-server
-- LocalStorage (armazenamento de sessão/autenticação)
+- 🟦 TypeScript
+- 🌐 HTML5
+- 🎨 CSS3
+- 📦 json-server
+- 💾 LocalStorage (armazenamento de sessão/autenticação)
 
 ---
 
